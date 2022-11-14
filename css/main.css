@@ -1,1 +1,101 @@
 @import "utility.css";
+
+/* Resets */
+body,
+h1 {
+  margin: 0px;
+  padding: 0px;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+button {
+  background: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Components */
+.primaryButton {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  background: var(--gr);
+  border-radius: 4px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.15);
+}
+.primaryButton:hover {
+  background: linear-gradient(#eb9200, #eb9200);
+}
+
+.secondaryButton {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  background: var(--b2);
+  border-radius: 4px;
+  box-shadow: inset 0 0 0 1px var(--b5), 0 0 2px rgba(0, 0, 0, 0.15);
+  transition: background 0.3s;
+}
+.secondaryButton:hover {
+  background: #d9d9d9;
+}
+
+/* Modal */
+.modal-bg {
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.modal-bg.active {
+  display: block;
+}
+
+.modal {
+  width: 100%;
+  max-width: 500px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px 20px;
+  margin: 64px auto 16px auto;
+  padding: 16px;
+  box-sizing: border-box;
+  background: var(--b1);
+  border: 1px solid var(--b2);
+  border-radius: 8px;
+}
+
+.modal img {
+  grid-column: 1/-1;
+  border-radius: 4px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+}
+
+.modal .downloadButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+.modal .downloadButton::before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  background: url("../img/download.svg");
+}
+
+@media (max-width: 500px) {
+  .modal {
+    border-radius: 0px;
+  }
+  .modal .downloadButton::before {
+    width: 14px;
+    height: 14px;
+    background-size: contain;
+  }
+}

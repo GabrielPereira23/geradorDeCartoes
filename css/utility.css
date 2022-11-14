@@ -12,6 +12,7 @@
   --e1: #004435;
   --e2: #005744;
   --e3: #653f00;
+  --gr: linear-gradient(#ff9f02, #eb9200);
 }
 .w {
   color: #ffffff;
@@ -43,9 +44,6 @@
 .e3 {
   color: #653f00;
 }
-.gr {
-  background: linear-gradient(#EB9200, #FF9F02);
-}
 
 /* Typography */
 .largeText {
@@ -56,4 +54,10 @@
 }
 .input {
   font: 400 1rem/1.25 "Poppins", sans-serif;
+}
+
+@media (max-width: 500px) {
+  html {
+    font-size: 14px;
+  }
 }
