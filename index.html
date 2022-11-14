@@ -20,12 +20,27 @@
     <div class="modal">
       <img src="img/test.jpg" alt="">
       <button class="largeText b3 secondaryButton">Voltar</button>
-      <button class="downloadButton largeText e3 primaryButton">Download</button>
+      <button class="downloadButton primaryButton largeText e3">Download</button>
     </div>
   </div>
 
   <!-- LOGO -->
   <img class="logo" src="img/logo.svg" alt="Logo Cresol">
+
+  <!-- FORM -->
+  <form class="form" action="./">
+    <h1 class="largeText e1">Gerador de Cartões</h1>
+    <label class="label e2" for="name">Nome</label>
+    <input class="input b3" type="name" name="name" id="name" autocomplete="off">
+    <label class="label e2" for="model">Modelo</label>
+    <div>
+      <select class="input b3" name="model" id="model">
+        <option value="natal">Natal</option>
+        <option value="aniversario">Aniversário</option>
+      </select>
+    </div>
+    <button class="primaryButton largeText e3">Gerar Cartão</button>
+  </form>
 
   <script src="js/main.js"></script>
 </body>

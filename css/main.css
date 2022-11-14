@@ -16,17 +16,21 @@ img {
   width: 100%;
 }
 
-button {
+button,
+input,
+select {
   background: none;
   outline: none;
   border: none;
+}
+
+button {
   cursor: pointer;
 }
 
 /* Components */
 .primaryButton {
-  padding-top: 8px;
-  padding-bottom: 8px;
+  padding: 8px;
   background: var(--gr);
   border-radius: 4px;
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.15);
@@ -115,4 +119,63 @@ button {
   .logo {
     width: 250px;
   }
+}
+
+/* Form */
+.form {
+  width: 100%;
+  max-width: 420px;
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 0 auto;
+  padding: 16px;
+  box-sizing: border-box;
+  background: var(--b1);
+  border: 1px solid var(--b2);
+  border-radius: 8px;
+}
+
+.form h1 {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.form label {
+  margin-bottom: 8px;
+}
+
+.form input,
+.form select {
+  padding: 8px 16px;
+  background-color: var(--w);
+  border: 1px solid var(--b2);
+  border-radius: 4px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.15);
+}
+
+.form input {
+  margin-bottom: 24px;
+}
+
+.form div {
+  width: 100%;
+  position: relative;
+  margin-bottom: 40px;
+}
+.form div::after {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 12px;
+  position: absolute;
+  right: 9px;
+  top: 13px;
+  background: url("../img/down-arrow.svg");
+  pointer-events: none;
+}
+
+.form select {
+  width: 100%;
+  -moz-appearance: none;
+  -webkit-appearance: none;
 }
