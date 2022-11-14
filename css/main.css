@@ -7,6 +7,10 @@ h1 {
   padding: 0px;
 }
 
+body {
+  padding-top: 64px;
+}
+
 img {
   display: block;
   width: 100%;
@@ -49,6 +53,8 @@ button {
   height: 100vh;
   display: none;
   position: fixed;
+  top: 0;
+  left: 0;
   background-color: rgba(0, 0, 0, 0.5);
 }
 .modal-bg.active {
@@ -97,5 +103,16 @@ button {
     width: 14px;
     height: 14px;
     background-size: contain;
+  }
+}
+
+/* Logo */
+.logo {
+  margin: 0 auto 64px auto;
+  width: max-content;
+}
+@media (max-width: 500px) {
+  .logo {
+    width: 250px;
   }
 }
