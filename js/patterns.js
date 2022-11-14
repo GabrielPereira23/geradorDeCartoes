@@ -17,7 +17,7 @@ const patterns = [
     x: 100,
     y: 100,
     imgFile: "patterns/aniversario.jpg",
-    font: "400 1rem/1 'Poppins', sans-serif",
+    font: "400 3rem/1 'Poppins', sans-serif",
     color: "#ffffff",
     quality: 0.8,
   },
