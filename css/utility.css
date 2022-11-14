@@ -1,0 +1,59 @@
+/* ---- Variables and Classes----  */
+
+/* Colors */
+:root {
+  --w: #ffffff;
+  --b1: #f6f6f6;
+  --b2: #e1e1e1;
+  --b3: #7b7b7b;
+  --b4: #dddddd;
+  --b5: #d3d3d3;
+  --b6: #aeaeae;
+  --e1: #004435;
+  --e2: #005744;
+  --e3: #653f00;
+}
+.w {
+  color: #ffffff;
+}
+.b1 {
+  color: #f6f6f6;
+}
+.b2 {
+  color: #e1e1e1;
+}
+.b3 {
+  color: #7b7b7b;
+}
+.b4 {
+  color: #dddddd;
+}
+.b5 {
+  color: #d3d3d3;
+}
+.b6 {
+  color: #aeaeae;
+}
+.e1 {
+  color: #004435;
+}
+.e2 {
+  color: #005744;
+}
+.e3 {
+  color: #653f00;
+}
+.gr {
+  background: linear-gradient(#EB9200, #FF9F02);
+}
+
+/* Typography */
+.largeText {
+  font: 400 1.25rem/1.2 "Poppins", sans-serif;
+}
+.label {
+  font: 400 0.875rem/16px "Poppins", sans-serif;
+}
+.input {
+  font: 400 1rem/1.25 "Poppins", sans-serif;
+}
