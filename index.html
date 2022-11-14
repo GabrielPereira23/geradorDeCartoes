@@ -19,7 +19,7 @@
   <div class="modal-bg">
     <div class="modal">
       <img src="img/test.jpg" alt="">
-      <button class="largeText b3 secondaryButton">Voltar</button>
+      <button class="largeText b3 secondaryButton" id="backBtn">Voltar</button>
       <button class="downloadButton primaryButton largeText e3">Download</button>
     </div>
   </div>
@@ -34,14 +34,13 @@
     <input class="input b3" type="name" name="name" id="name" autocomplete="off">
     <label class="label e2" for="model">Modelo</label>
     <div>
-      <select class="input b3" name="model" id="model">
-        <option value="natal">Natal</option>
-        <option value="aniversario">Aniversário</option>
+      <select class="input b3 j-select" name="model" id="model">
       </select>
     </div>
-    <button class="primaryButton largeText e3">Gerar Cartão</button>
+    <button class="primaryButton largeText e3" id="genBtn">Gerar Cartão</button>
   </form>
 
+  <script src="js/patterns.js"></script>
   <script src="js/main.js"></script>
 </body>
 
