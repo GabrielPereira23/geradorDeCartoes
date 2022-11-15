@@ -1,5 +1,7 @@
 /* -- Objeto com os itens do DOM -- */
 const dom = {
+  backButton: document.querySelector(".j-backBtn"),
+  modal: document.querySelector(".j-modal"),
   input: document.querySelector(".j-nameInput"),
   select: document.querySelector(".j-select"),
   genButton: document.querySelector(".j-genBtn"),
@@ -13,12 +15,28 @@ patterns.forEach((pattern, index) => {
   dom.select.appendChild(option);
 });
 
+/* -- Botão que fecha o modal --*/
+dom.backButton.addEventListener("click", () =>
+  dom.modal.classList.toggle("active")
+);
+
+/* -- Botão que gera a imagem --*/
+let enableButton = false;
+dom.genButton.addEventListener("click", (e) => {
+  e.preventDefault();
+  if (enableButton) {
+    dom.modal.classList.toggle("active");
+  }
+});
+
 /* -- Bloqueio e desbloqueio do botão -- */
 dom.input.addEventListener("input", (e) => {
   if (e.currentTarget.value === "") {
     dom.genButton.classList.remove("active");
+    enableButton = false;
   } else {
     dom.genButton.classList.add("active");
+    enableButton = true;
   }
 });
 
@@ -37,7 +55,9 @@ function genCard(name, pattern, callback) {
     ctx.font = font;
     ctx.fillText(name, x, y);
     callback(
-      canvas.toDataURL("image/jpeg", quality).replace("image/jpg", "image/octet-stream")
+      canvas
+        .toDataURL("image/jpeg", quality)
+        .replace("image/jpg", "image/octet-stream")
     );
   };
 }
