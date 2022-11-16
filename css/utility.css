@@ -47,13 +47,13 @@
 
 /* Typography */
 .largeText {
-  font: 400 1.25rem/1.2 "Poppins", sans-serif;
+  font: 500 1.25rem/1.2 "BwModelica", sans-serif;
 }
 .label {
-  font: 400 0.875rem/16px "Poppins", sans-serif;
+  font: 400 0.875rem/16px "BwModelica", sans-serif;
 }
 .input {
-  font: 400 1rem/1.25 "Poppins", sans-serif;
+  font: 400 1rem/1.25 "BwModelica", sans-serif;
 }
 
 @media (max-width: 500px) {

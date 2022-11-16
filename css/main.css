@@ -1,5 +1,6 @@
 @import "utility.css";
 @import "animation.css";
+@import "fonts.css";
 
 /* Resets */
 body,
@@ -201,11 +202,8 @@ button {
   cursor: initial;
 }
 .form button.active {
-  padding: 8px;
   color: var(--e3);
   background: var(--gr);
-  border-radius: 4px;
-  box-shadow: 0 0 2px rgba(0, 0, 0, 0.15);
   cursor: pointer;
 }
 .form button.active:hover,

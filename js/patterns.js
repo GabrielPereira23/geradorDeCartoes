@@ -1,9 +1,35 @@
-//   name
-//   width
-//   height
-//   x
-//   y
-//   imgFile
-//   font
-//   color
-//   quality
+const patterns = [
+  {
+    name: "Exemplo 1",
+    width: 1080,
+    height: 1080,
+    x: 160,
+    y: 198,
+    imgFile: "patterns/exemplo 1.jpg",
+    font: "800 48px/48px 'Poppins', sans-serif",
+    color: "#ffffff",
+    quality: 0.7,
+  },
+  {
+    name: "Exemplo 2",
+    width: 1080,
+    height: 1080,
+    x: 241,
+    y: 344,
+    imgFile: "patterns/exemplo 2.jpg",
+    font: "800 48px/48px 'BwModelica', sans-serif",
+    color: "#f00",
+    quality: 0.7,
+  },
+  {
+    name: "Exemplo 3",
+    width: 1080,
+    height: 1080,
+    x: 682,
+    y: 540,
+    imgFile: "patterns/exemplo 3.jpg",
+    font: "800 48px/48px 'BwModelica', sans-serif",
+    color: "#f00",
+    quality: 0.7,
+  },
+];
