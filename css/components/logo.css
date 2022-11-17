@@ -1,0 +1,10 @@
+/* ------ LOGO ------ */
+.logo {
+  margin: 0 auto 64px auto;
+  width: max-content;
+}
+@media (max-width: 500px) {
+  .logo {
+    width: 250px;
+  }
+}

@@ -69,6 +69,8 @@ function genImg(name, pattern, callback) {
     ctx.drawImage(image, 0, 0, width, height);
     ctx.fillStyle = color;
     ctx.font = font;
+    ctx.textAlign = "center";
+    // ctx.textBaseline = "top";
     ctx.fillText(name, x, y);
     callback(canvas.toDataURL("image/jpeg", quality));
   };
