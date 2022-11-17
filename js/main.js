@@ -9,6 +9,24 @@ const dom = {
   genButton: document.querySelector(".j-genBtn"),
 };
 
+/* -- Objeto que controla o modal -- */
+const modal = {
+  state: false,
+  toggle: function () {
+    dom.modal.classList.toggle("active");
+    modal.state = !modal.state;
+  },
+  eventListeners: function () {
+    dom.backButton.addEventListener("click", this.toggle);
+    document.addEventListener("keydown", (e) => {
+      if (modal.state && e.key === "Escape") {
+        this.toggle();
+      }
+    });
+  },
+};
+modal.eventListeners();
+
 /* -- Preenche o seletor com os modelos -- */
 patterns.forEach((pattern, index) => {
   const option = document.createElement("option");
@@ -16,11 +34,6 @@ patterns.forEach((pattern, index) => {
   option.innerText = pattern.name;
   dom.select.appendChild(option);
 });
-
-/* -- Botão que fecha o modal --*/
-dom.backButton.addEventListener("click", () =>
-  dom.modal.classList.toggle("active")
-);
 
 /* -- Bloqueio e desbloqueio do botão -- */
 dom.input.addEventListener("input", (e) => {
@@ -42,17 +55,6 @@ dom.genButton.addEventListener("click", (e) => {
   }
 });
 
-/* -- Função que gera o cartão -- */
-function genCard(name, patternIndex) {
-  genImg(name, patterns[patternIndex], (img) => {
-    dom.image.src = img;
-    dom.modal.classList.toggle("active");
-    //const link = document.createElement("a");
-    dom.downloadButton.href = img.replace("image/jpeg", "image/octet-stream");
-    dom.downloadButton.download = "cartão.jpeg";
-  });
-}
-
 /* -- Função que gera a imagem do cartão -- */
 function genImg(name, pattern, callback) {
   const canvas = document.createElement("canvas");
@@ -67,8 +69,17 @@ function genImg(name, pattern, callback) {
     ctx.fillStyle = color;
     ctx.font = font;
     ctx.textAlign = "center";
-    // ctx.textBaseline = "top";
     ctx.fillText(name, x, y);
     callback(canvas.toDataURL("image/jpeg", quality));
   };
+}
+
+/* -- Função que apresenta o cartão -- */
+function genCard(name, patternIndex) {
+  genImg(name, patterns[patternIndex], (img) => {
+    dom.image.src = img;
+    modal.toggle();
+    dom.downloadButton.href = img.replace("image/jpeg", "image/octet-stream");
+    dom.downloadButton.download = "cartão.jpeg";
+  });
 }
