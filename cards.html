@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Cresol - Gerador de Cartões</title>
+</head>
+
+<body>
+  <!-- MODAL -->
+  <div class="modal-bg j-modal">
+    <div class="modal">
+      <img class="j-img" src="" alt="">
+      <button class="backButton largeText b3 j-backBtn">Voltar</button>
+      <button class="downloadButton largeText e4 j-downBtn">Download</button>
+    </div>
+  </div>
+
+  <!-- LOGO -->
+  <img class="logo" src="img/logo.svg" alt="Logo Cresol">
+
+  <!-- FORM -->
+  <form class="form" action="./">
+    <h1 class="largeText e1">Gerador de Cartões</h1>
+    <label class="label e2" for="name">Nome</label>
+    <input class="input b3 j-nameInput" type="name" name="name" id="name" autocomplete="off" maxlength="40">
+    <label class="label e2" for="model">Modelo</label>
+    <div>
+      <select class="input b3 j-select" name="model" id="model">
+      </select>
+    </div>
+    <button class="largeText b6 j-genBtn">Gerar Cartão</button>
+  </form>
+
+  <!-- SCRIPTS -->
+  <script src="js/patterns.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

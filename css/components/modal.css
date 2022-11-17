@@ -68,7 +68,7 @@
   display: block;
   width: 16px;
   height: 16px;
-  background: url("../img/download.svg");
+  background: url("../../img/download.svg");
 }
 
 @media (max-width: 500px) {

@@ -55,7 +55,7 @@
   position: absolute;
   right: 9px;
   top: 13px;
-  background: url("../img/down-arrow.svg");
+  background: url("../../img/down-arrow.svg");
   pointer-events: none;
 }
 
@@ -75,7 +75,7 @@
   cursor: initial;
 }
 .form button.active {
-  color: var(--e3);
+  color: var(--e4);
   background: var(--gr);
   cursor: pointer;
 }

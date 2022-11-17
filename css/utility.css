@@ -11,7 +11,8 @@
   --b6: #aeaeae;
   --e1: #004435;
   --e2: #005744;
-  --e3: #653f00;
+  --e3: #b8d9cd;
+  --e4: #653f00;
   --gr: linear-gradient(#ff9f02, #eb9200);
 }
 .w {
@@ -42,10 +43,16 @@
   color: #005744;
 }
 .e3 {
+  color: #b8d9cd;
+}
+.e4 {
   color: #653f00;
 }
 
 /* Typography */
+.link {
+  font: 400 1.1rem/1.25 "BwModelica", sans-serif;
+}
 .largeText {
   font: 500 1.25rem/1.2 "BwModelica", sans-serif;
 }
