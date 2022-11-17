@@ -31,7 +31,7 @@
 .modal img {
   grid-column: 1/-1;
   border-radius: 4px;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
 }
 
 .modal .backButton {
@@ -56,6 +56,7 @@
   background: var(--gr);
   border-radius: 4px;
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
 }
 .modal .downloadButton:hover {
   background: linear-gradient(#eb9200, #eb9200);

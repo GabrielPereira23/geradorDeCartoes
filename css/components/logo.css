@@ -5,6 +5,7 @@
 }
 @media (max-width: 500px) {
   .logo {
+    margin-bottom: 48px;
     width: 250px;
   }
 }

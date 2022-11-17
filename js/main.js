@@ -47,12 +47,9 @@ function genCard(name, patternIndex) {
   genImg(name, patterns[patternIndex], (img) => {
     dom.image.src = img;
     dom.modal.classList.toggle("active");
-    const link = document.createElement("a");
-    link.href = img.replace("image/jpeg", "image/octet-stream");
-    link.download = "cartão.jpeg";
-    dom.downloadButton.addEventListener("click", () => {
-      link.click();
-    });
+    //const link = document.createElement("a");
+    dom.downloadButton.href = img.replace("image/jpeg", "image/octet-stream");
+    dom.downloadButton.download = "cartão.jpeg";
   });
 }
 

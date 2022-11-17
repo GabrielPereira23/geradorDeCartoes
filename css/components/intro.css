@@ -1,7 +1,9 @@
 .intro {
   width: 100%;
+  padding: 0 16px;
   max-width: 440px;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .intro a {
@@ -10,7 +12,7 @@
   padding: 8px;
   text-align: center;
   border-radius: 100px;
-  background: var(--e1);
+  background: #005c46;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
   transition: background 0.2s;
 }

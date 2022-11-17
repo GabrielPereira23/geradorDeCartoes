@@ -9,6 +9,11 @@ ul {
 body {
   padding-top: 64px;
 }
+@media (max-width: 500px) {
+  body {
+    padding-top: 48px;
+  }
+}
 
 a {
   text-decoration: none;
